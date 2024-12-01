@@ -59,13 +59,28 @@
                     }
 
            @media (min-width: 640px) {
-                        .sm\:flex-row {
+
+                         /*  styles inside are only applied when the viewport width is 640px or larger. */
+
+                        .sm\:flex-row { 
 
                             flex-direction: row; 
                             /* Changes the flex direction to row on small screens (640px and above). */
 
                         }
                     }
+
+           @media (min-width: 768px) {
+                            /*  styles inside are only applied when the viewport width is 768px or larger. */
+
+                        .md\:flex-row { 
+                         /* \: is used in CSS to escape the colon in the class name. */
+
+                            flex-direction: row; 
+
+                        }
+                    }
+
 
            .gap-8 {
                         gap: 2rem; 
@@ -216,6 +231,9 @@
             </div>
         </div>
     </nav>
+    <main class="flex flex-col md:flex-row mx-auto container max-w-6xl">
+        <!-- MAIN AREA -->
+    </main>
     <!-- LOAD JS -->
     <script src="script.js"></script>
 </body>
