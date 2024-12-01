@@ -68,6 +68,13 @@
                             /* Changes the flex direction to row on small screens (640px and above). */
 
                         }
+
+                        #products-wrapper {
+                        
+                                    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+                                    /* sm:grid-cols-3 :
+                                        3 columns when the screen width is ≥640px. */
+                                }
                     }
 
            @media (min-width: 768px) {
@@ -243,16 +250,6 @@
                                 padding: 1rem; /* p-4 (16px in Tailwind) */
                             }
 
-            /* Responsive changes */
-
-            @media (min-width: 640px) { 
-                /* sm breakpoint: >= 640px */
-                #products-wrapper {
-                                    grid-template-columns: repeat(3, minmax(0, 1fr)); 
-                                    /* sm:grid-cols-3 :
-                                        3 columns when the screen width is ≥640px. */
-                                }
-                        }
                                 
             @media (min-width: 1280px) { 
                 /* xl breakpoint: >= 1280px */
@@ -263,6 +260,50 @@
                                 }
                         }
 
+            bg-gray-100 {
+                            background-color: #f3f4f6; 
+                            /* A very light gray color */
+                        }  
+            
+            
+            justify-center {
+                            display: flex; 
+                            /* Required for justify-content to apply */
+
+                            justify-content: center; 
+                            /* Centers child elements horizontally */
+            }  
+            
+            overflow-hidden {
+
+                            overflow: hidden; 
+                            /* Hides any content that overflows the element's box */
+
+            }
+
+            
+            /* group {}
+
+             group in Tailwind is a utility class that enables styling child elements conditionally when the parent element has certain states (e.g., hover or focus).
+            It doesn't have a direct CSS property but works with pseudo-classes on child elements like: */
+
+             .group:hover .child-selector {
+
+                        /* Styles for child elements */
+
+                    }
+
+            
+            cursor-pointer{
+                            cursor: pointer; 
+                            /* Changes the cursor to a pointer, typically for clickable elements */
+
+            } 
+            
+            rounded-xl{
+                        border-radius: 0.75rem; 
+                        /* Adds a large rounding effect to corners (12px in Tailwind) */
+            }
         -->
 
     <title>Tech Store</title>
@@ -344,6 +385,10 @@
          <!-- PRODUCTS WRAPPER -->
          <div id="products-wrapper" class="w-full max-w-4xl mx-auto grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 place-content-center p-4">
             <!-- DISPLAY PRODUCTS -->
+             <div class="item space-y-2">
+                 <div class="bg-gray-100 flex justify-center relative overflow-hidden group cursor-pointer rounded-xl">
+                 </div>
+             </div>
          </div>   
     </main>
     <!-- LOAD JS -->
