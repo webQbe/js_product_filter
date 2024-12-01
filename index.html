@@ -129,6 +129,44 @@
                         /* Translates the Search icon upward by 50% of its own height to align it vertically with the input field.  */
                     }
 
+
+            .text-center {
+                        text-align: center;
+                    }
+
+            .bg-red-500 {
+                        background-color: #ef4444; 
+                        /* Sets the background color to a medium red (Tailwind's red-500 value: #ef4444 by default). */
+                    }
+
+
+            .text-xs {
+                        font-size: 0.75rem;
+                        /* Sets the font size to extra small (0.75rem or 12px by default).*/
+                    }
+
+            .text-white {
+                        color: #ffffff;
+                    }
+
+            .w-4 {
+                        width: 1rem;
+                    }
+
+            .h-4 {
+                        height: 1rem;
+                    }
+
+
+            .-top-2 {
+                        top: -0.5rem; 
+                        /* Positions the element 0.5rem (8px) above the parent’s top edge (negative value moves it outside).*/
+                    }
+
+            .-right-2 {
+                        right: -0.5rem;
+                        /* Positions the element 0.5rem (8px) to the left of the parent’s right edge (negative value moves it outside). */
+                    }
         -->
 
     <title>Tech Store</title>
@@ -157,6 +195,25 @@
             </div>
 
             <!-- CART ICON -->
+            <div class="relative text-center">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                    d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"
+                    />
+                    <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+                </svg>
+                <small id="cart-count" class="bg-red-500 rounded-full text-xs text-white w-4 h-4 absolute -top-2 -right-2">0</small>
+            </div>
         </div>
     </nav>
     <!-- LOAD JS -->
