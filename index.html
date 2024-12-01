@@ -61,18 +61,74 @@
            @media (min-width: 640px) {
                         .sm\:flex-row {
 
-                            flex-direction: row; /* Changes the flex direction to row on small screens (640px and above). */
+                            flex-direction: row; 
+                            /* Changes the flex direction to row on small screens (640px and above). */
 
                         }
                     }
 
            .gap-8 {
-                        gap: 2rem; /* Adds an 8-unit gap between children (default spacing is 2rem or 32px). */
+                        gap: 2rem; 
+                        /* Adds an 8-unit gap between children (default spacing is 2rem or 32px). */
                     }
 
            .items-center {
                         align-items: center;
                     }
+
+
+            .relative {
+                        position: relative; 
+                        /* Makes the <div> a relatively positioned container, which is required for positioning child elements with absolute positioning.*/
+                    }
+
+            .w-full {
+                        width: 100%;
+                    }
+
+            .bg-gray-700 {
+                        background-color: #374151;
+                    }
+
+            .rounded-full {
+                        border-radius: 9999px; 
+                        /* Gives the input element fully rounded corners, making it appear circular. */
+                    }
+
+            .p-2 {
+                        padding: 0.5rem;
+                    }
+
+            .pl-10 {
+                        padding-left: 2.5rem;
+                    }
+
+            input:focus {
+                        width: 100%; 
+                        /* Expands the input to fill the container width (100%) when it gains focus. */
+                    }
+
+            .absolute {
+                        position: absolute; 
+                        /* Positions the search icon absolutely, relative to its closest relatively positioned ancestor (the outer <div>).*/
+                    }
+
+            .left-2 {
+                        left: 0.5rem; 
+                        /* Positions the SVG 0.5rem (8px) from the left edge of its container. */
+                    }
+                    
+            .top-1/2 {
+                        top: 50%; 
+                        /* Aligns the Search icon to the vertical center of its container by setting its top to 50% of the container’s height. */
+                    }
+
+            .-translate-y-1/2 {
+
+                        transform: translateY(-50%); 
+                        /* Translates the Search icon upward by 50% of its own height to align it vertically with the input field.  */
+                    }
+
         -->
 
     <title>Tech Store</title>
@@ -80,7 +136,27 @@
 <body class="bg-gray-800 text-white">
     <nav class="bg-gray-900 p-4 mb-6">
         <div class="container max-w-6xl mx-auto flex flex-col sm:flex-row gap-8 items-center">
+            <!-- SEARCH AREA -->
+            <div class="relative w-full">
+                <input type="text" id="search" class="bg-gray-700 rounded-full p-2 pl-10 focus:w-full" placeholder="Search Products...">
+                <svg
+                    class="absolute left-2 top-1/2 -translate-y-1/2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                    <path d="M21 21l-6 -6" />
+                </svg>
+            </div>
 
+            <!-- CART ICON -->
         </div>
     </nav>
     <!-- LOAD JS -->
