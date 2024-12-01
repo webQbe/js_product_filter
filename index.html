@@ -216,7 +216,52 @@
                             line-height: 2rem; /* 32px */
                         }
 
+            input.check {
+                            
+                            margin-right: 8px; /* mr-2 */
+                            
+                        }
 
+            #products-wrapper {
+                                width: 100%; /* w-full */
+                                max-width: 64rem; /* max-w-4xl (1024px in Tailwind) */
+                                margin-left: auto; /* mx-auto */
+                                margin-right: auto; /* mx-auto */
+
+                                display: grid; 
+                                /* Tailwind assumes a grid container when using grid-cols-[]*/
+
+                                grid-template-columns: repeat(2, minmax(0, 1fr)); 
+                                /* grid-cols-2 :  2 columns by default.*/
+
+                                gap: 1.5rem; /* gap-6 (24px in Tailwind) :
+                                    Adds 24px of spacing between grid items. */
+
+                                place-content: center; /* place-content-center :
+                                Centers grid content both vertically and horizontally.*/
+
+                                padding: 1rem; /* p-4 (16px in Tailwind) */
+                            }
+
+            /* Responsive changes */
+
+            @media (min-width: 640px) { 
+                /* sm breakpoint: >= 640px */
+                #products-wrapper {
+                                    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+                                    /* sm:grid-cols-3 :
+                                        3 columns when the screen width is ≥640px. */
+                                }
+                        }
+                                
+            @media (min-width: 1280px) { 
+                /* xl breakpoint: >= 1280px */
+                #products-wrapper {
+                                    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+                                    /* xl:grid-cols-4 :
+                                        4 columns when the screen width is ≥1280px. */
+                                }
+                        }
 
         -->
 
@@ -296,6 +341,10 @@
                 </div>
             </div>
          </div>
+         <!-- PRODUCTS WRAPPER -->
+         <div id="products-wrapper" class="w-full max-w-4xl mx-auto grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 place-content-center p-4">
+            <!-- DISPLAY PRODUCTS -->
+         </div>   
     </main>
     <!-- LOAD JS -->
     <script src="script.js"></script>
