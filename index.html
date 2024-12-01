@@ -260,13 +260,13 @@
                                 }
                         }
 
-            bg-gray-100 {
+            .bg-gray-100 {
                             background-color: #f3f4f6; 
                             /* A very light gray color */
                         }  
             
             
-            justify-center {
+            .justify-center {
                             display: flex; 
                             /* Required for justify-content to apply */
 
@@ -274,36 +274,62 @@
                             /* Centers child elements horizontally */
             }  
             
-            overflow-hidden {
+            .overflow-hidden {
 
                             overflow: hidden; 
                             /* Hides any content that overflows the element's box */
 
             }
 
+            .group:hover .child-selector {
+
+                /* .group {}
+                    group in Tailwind is a utility class that enables styling child elements conditionally when the parent element has certain states (e.g., hover or focus).
+
+                    It doesn't have a direct CSS property but works with pseudo-classes on child elements like: */
+
+                    /* Styles for child elements */
+
+             }
+
             
-            /* group {}
-
-             group in Tailwind is a utility class that enables styling child elements conditionally when the parent element has certain states (e.g., hover or focus).
-            It doesn't have a direct CSS property but works with pseudo-classes on child elements like: */
-
-             .group:hover .child-selector {
-
-                        /* Styles for child elements */
-
-                    }
-
-            
-            cursor-pointer{
+            .cursor-pointer{
                             cursor: pointer; 
                             /* Changes the cursor to a pointer, typically for clickable elements */
 
             } 
             
-            rounded-xl{
+            .rounded-xl{
                         border-radius: 0.75rem; 
                         /* Adds a large rounding effect to corners (12px in Tailwind) */
             }
+
+            .w-60 {
+                     width:  15rem;  
+                    /* Set the container width to 15rem (240px) */          
+            }
+            
+           
+            .h-60 {
+                    height:  15rem; 
+                    /* Set the container height to 15rem (240px) */       
+            } 
+
+            .border {
+                            
+                    border: 1px solid; 
+                    /* Adds a thin, solid border to an element */
+
+                    border-color: currentColor;   
+                    /* Uses the current text color of the element as the border color. */     
+            }
+                
+            .object-cover {
+                            
+                object-fit: cover;
+                /* Ensures the media fills the container completely without stretching, and any overflow is cropped.*/
+
+            } 
         -->
 
     <title>Tech Store</title>
@@ -386,8 +412,9 @@
          <div id="products-wrapper" class="w-full max-w-4xl mx-auto grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 place-content-center p-4">
             <!-- DISPLAY PRODUCTS -->
              <div class="item space-y-2">
-                 <div class="bg-gray-100 flex justify-center relative overflow-hidden group cursor-pointer rounded-xl">
-                 </div>
+                 <div class="bg-gray-100 flex justify-center relative overflow-hidden group cursor-pointer border rounded-xl w-60 h-60">
+                    <img src="/images/playstation_5.png" alt="" class="w-full h-full object-cover">
+                 </div> 
              </div>
          </div>   
     </main>
