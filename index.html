@@ -182,6 +182,42 @@
                         right: -0.5rem;
                         /* Positions the element 0.5rem (8px) to the left of the parent’s right edge (negative value moves it outside). */
                     }
+
+
+            .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+
+                            /* Applies to visible siblings of a visible direct child 
+                             (First child) within .parent. The [hidden] children are ignored. */
+
+                                margin-top: 0.5rem; 
+
+                            }
+
+            .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+
+                                margin-top: 1rem; 
+                                /* Adds a vertical margin of 1rem (16px) between child elements of the container. */
+
+                            }
+
+
+            .max-w-\[10rem\] {
+                                max-width: 10rem; 
+                                /* Sets the maximum width of the element to 10rem (160px) */
+                            }
+
+            .text-xl {
+                            font-size: 1.25rem; /* 20px */
+                            line-height: 1.75rem; /* 28px */
+                        }
+
+            .text-2xl {
+                            font-size: 1.5rem; /* 24px */
+                            line-height: 2rem; /* 32px */
+                        }
+
+
+
         -->
 
     <title>Tech Store</title>
@@ -233,6 +269,14 @@
     </nav>
     <main class="flex flex-col md:flex-row mx-auto container max-w-6xl">
         <!-- MAIN AREA -->
+         <div class="space-y-4 p-2 w-full max-w-[10rem]">
+            <!-- SIDEBAR -->
+            <h2 class="text-2xl">Filters</h2>
+            <h3 class="text-xl">Category</h3>
+            <div id="filters-container" class="text-xl space-y-2">
+                
+            </div>
+         </div>
     </main>
     <!-- LOAD JS -->
     <script src="script.js"></script>
