@@ -32,17 +32,56 @@
             
             }
 
-            
 
-    
-    
+          nav .container {
+                        width: 100%;
+                        margin-right: auto; 
+                        margin-left: auto; /* Centers the element horizontally with auto    left and right margins. */
+                        padding-right: 1rem;
+                        padding-left: 1rem;
+                    }
+
+          .max-w-6xl {
+                        max-width: 72rem; /* 1152px */
+                    }
+
+          .mx-auto {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+          .flex {
+                        display: flex;
+                    }
+
+          .flex-col {
+                        flex-direction: column;
+                    }
+
+           @media (min-width: 640px) {
+                        .sm\:flex-row {
+
+                            flex-direction: row; /* Changes the flex direction to row on small screens (640px and above). */
+
+                        }
+                    }
+
+           .gap-8 {
+                        gap: 2rem; /* Adds an 8-unit gap between children (default spacing is 2rem or 32px). */
+                    }
+
+           .items-center {
+                        align-items: center;
+                    }
         -->
 
     <title>Tech Store</title>
 </head>
 <body class="bg-gray-800 text-white">
     <nav class="bg-gray-900 p-4 mb-6">
+        <div class="container max-w-6xl mx-auto flex flex-col sm:flex-row gap-8 items-center">
 
+        </div>
     </nav>
     <!-- LOAD JS -->
     <script src="script.js"></script>
