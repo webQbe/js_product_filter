@@ -87,6 +87,15 @@ let cartItemCount = 0;
 // Initialize Product Element Array
 const productElements = [];
 
+/* Event Listeners */
+
+// Listen for change events in #filtersContainer
+filtersContainer.addEventListener('change', filterProducts);
+
+// Listen for input events in #searchInput
+searchInput.addEventListener('input', filterProducts);
+   
+
 // Loop Through Products Array
 products.forEach((product) => {
   
