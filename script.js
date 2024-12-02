@@ -125,6 +125,10 @@ function createProductElement(product){
 
                               // product.price.toLocaleString() : adds 1,000 separators
   
+  // Listen for click events in 'Add To Cart' button
+  productElement.querySelector('.status').addEventListener('click', updateCart);
+
   return productElement;
 
 }
+
