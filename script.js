@@ -81,4 +81,8 @@ const filtersContainer = document.getElementById('filters-container');
 const searchInput = document.getElementById('search');
 const cartCount = document.getElementById('cart-count');  
 
+// Initialize Cart Item Count
+let cartItemCount = 0;
 
+// Initialize Product Element Array
+const productElements = [];
