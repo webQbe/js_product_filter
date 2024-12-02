@@ -73,3 +73,12 @@ const products = [
       price: 999.99,
     },
   ];
+
+// Define DOM Elements
+const productsWrapper = document.getElementById('products-wrapper'); 
+const checkBoxes = document.querySelectorAll('.check');
+const filtersContainer = document.getElementById('filters-container'); 
+const searchInput = document.getElementById('search');
+const cartCount = document.getElementById('cart-count');  
+
+
