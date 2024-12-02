@@ -98,7 +98,7 @@ products.forEach((product) => {
 
   // Add innerHTML with data from products array
   productElement.innerHTML = `<div class="bg-gray-100 flex 
-                              justify-center relative overflow-hidden group cursor-pointer border rounded-xl w-60 h-60">
+                              justify-center relative overflow-hidden group cursor-pointer border rounded-xl w-full h-50">
 
                                 <img src="${product.url}" alt="${product.name}" class="w-full h-full object-cover">
 
