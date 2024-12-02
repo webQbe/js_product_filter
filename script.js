@@ -132,3 +132,10 @@ function createProductElement(product){
 
 }
 
+// Add or Remove Item from Cart
+function updateCart(e){
+
+  const clickedButton = e.target;
+  console.log(clickedButton);
+
+}
