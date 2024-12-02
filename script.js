@@ -191,8 +191,8 @@ function filterProducts(){
 
   // Get checked filters
   const checkedFilters = Array.from(checkBoxes)
-                          .filter((check) => check.checked); 
-
+                          .filter((check) => check.checked)
+                          .map((check) => check.id); 
                           /* Filtering Checked Checkboxes:
                           
                               Array.from(checkBoxes): 
@@ -200,9 +200,13 @@ function filterProducts(){
                               
                               .filter(): 
                               Loops through each checkbox in the array and checks if it is currently checked (check.checked returns true if the checkbox is checked).
+
+                              .map():
+                              Selects only the id of filter element
                               
-                              The resulting array, `checkedFilters`, contains only the checkbox elements that are checked. */
+                              The resulting array, `checkedFilters`, contains only the IDs of checkbox elements that are checked. */
 
   console.log(checkedFilters);
 
 }
+
