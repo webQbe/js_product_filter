@@ -86,3 +86,8 @@ let cartItemCount = 0;
 
 // Initialize Product Element Array
 const productElements = [];
+
+// Loop Through Products Array
+products.forEach((product) => {
+  console.log(product);
+});
