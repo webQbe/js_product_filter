@@ -89,5 +89,29 @@ const productElements = [];
 
 // Loop Through Products Array
 products.forEach((product) => {
-  console.log(product);
+
+  // Create div element for current product
+  const productElement = document.createElement('div');
+
+  // Add classes to the div
+  productElement.className = 'item space-y-2';
+
+  // Add innerHTML with data from products array
+  productElement.innerHTML = `<div class="bg-gray-100 flex 
+                              justify-center relative overflow-hidden group cursor-pointer border rounded-xl w-60 h-60">
+
+                                <img src="${product.url}" alt="${product.name}" class="w-full h-full object-cover">
+
+                                <button class="status bg-black text-white absolute bottom-0 left-0 right-0 text-center py-2 translate-y-full transition group-hover:translate-y-0">Add To Cart</button> 
+
+                              </div> 
+                              <p class="text-xl">${product.name}</p>
+                              <strong>$${product.price.toLocaleString()}</strong>`;
+
+  // Add current element to array
+  productElements.push(productElement);
+
+  // Add current product to DOM
+  productsWrapper.appendChild(productElement);
+
 });
