@@ -145,7 +145,7 @@ function createProductElement(product){
 function updateCart(e){
 
   const clickedButton = e.target;
-  console.log(clickedButton);
+/*   console.log(clickedButton);*/
 
   if(clickedButton.classList.contains('added')){
 
@@ -179,5 +179,30 @@ function updateCart(e){
 
   // Update cart item count
   cartCount.innerText = cartItemCount.toString();
+
+}
+
+function filterProducts(){
+
+  // Get search term
+  const searchTerm = searchInput.value
+                      .trim() // Remove white spaces 
+                      .toLowerCase(); // Convert to lower case
+
+  // Get checked filters
+  const checkedFilters = Array.from(checkBoxes)
+                          .filter((check) => check.checked); 
+
+                          /* Filtering Checked Checkboxes:
+                          
+                              Array.from(checkBoxes): 
+                              Converts the NodeList into an actual array to allow for the use of array methods like .filter().
+                              
+                              .filter(): 
+                              Loops through each checkbox in the array and checks if it is currently checked (check.checked returns true if the checkbox is checked).
+                              
+                              The resulting array, `checkedFilters`, contains only the checkbox elements that are checked. */
+
+  console.log(checkedFilters);
 
 }
