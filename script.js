@@ -194,7 +194,6 @@ function filterProducts(){
                           .filter((check) => check.checked)
                           .map((check) => check.id); 
                           /* Filtering Checked Checkboxes:
-                          
                               Array.from(checkBoxes): 
                               Converts the NodeList into an actual array to allow for the use of array methods like .filter().
                               
@@ -206,7 +205,36 @@ function filterProducts(){
                               
                               The resulting array, `checkedFilters`, contains only the IDs of checkbox elements that are checked. */
 
-  console.log(checkedFilters);
+  // console.log(checkedFilters);
+
+  // Loop through productElements array to check for matches
+  productElements.forEach((productElement, index) => {
+
+    // Get product in current index
+    const product = products[index];
+
+    // Check if current product matches search term
+    const searchTermMatch = product.name.toLowerCase().includes(searchTerm);
+
+    // Check if current product matches filter
+    const filterMatch = checkedFilters.length === 0 || checkedFilters.includes(product.category); /* Breakdown of the Logic:
+                  If no filters are selected (checkedFilters.length === 0), the result is true (all products match).
+                  If filters are selected but the current product.category matches one of the selected filters, the result is true. */
+
+    // Decide to show or hide current product
+    // Check if both matches are true
+    if(searchTermMatch && filterMatch){
+        
+        // Show current product
+        productElement.classList.remove('hidden'); // Remove .hidden class
+
+    } else {
+
+        // Hide current product
+        productElement.classList.add('hidden'); // Add .hidden class
+
+    }
+  });
 
 }
 
