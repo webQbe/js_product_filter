@@ -89,6 +89,21 @@ const productElements = [];
 
 // Loop Through Products Array
 products.forEach((product) => {
+  
+  // Create productElement
+  const productElement = createProductElement(product);
+
+  // Add current element to array
+  productElements.push(productElement);
+
+  // Add current product to DOM
+  productsWrapper.appendChild(productElement);
+
+  
+});
+
+
+function createProductElement(product){
 
   // Create div element for current product
   const productElement = document.createElement('div');
@@ -108,10 +123,8 @@ products.forEach((product) => {
                               <p class="text-xl">${product.name}</p>
                               <strong>$${product.price.toLocaleString()}</strong>`;
 
-  // Add current element to array
-  productElements.push(productElement);
+                              // product.price.toLocaleString() : adds 1,000 separators
+  
+  return productElement;
 
-  // Add current product to DOM
-  productsWrapper.appendChild(productElement);
-
-});
+}
