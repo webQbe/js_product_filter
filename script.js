@@ -138,4 +138,29 @@ function updateCart(e){
   const clickedButton = e.target;
   console.log(clickedButton);
 
+  if(clickedButton.classList.contains('added')){
+
+    // Remove product from cart
+    clickedButton.classList.remove('added'); // Remove class
+
+    // Change button text
+    clickedButton.innerText = 'Add To Cart';
+
+    // Change button color
+    clickedButton.classList.remove('bg-red-600');
+    clickedButton.classList.add('bg-gray-800');
+   
+  } else {
+
+    // Add product to cart
+    clickedButton.classList.add('added'); // Add class
+
+    // Change button text
+    clickedButton.innerText = 'Remove From Cart';
+
+    // Change button color
+    clickedButton.classList.remove('bg-gray-800');
+    clickedButton.classList.add('bg-red-600'); 
+  }
+
 }
